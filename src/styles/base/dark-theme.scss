@@ -1,0 +1,210 @@
+.dark-mode {
+  // Cores de fundo
+  --background-color: #{$gray-900};
+  --container-bg: #{$gray-800};
+  --card-bg: #{$gray-800};
+  
+  // Cores de texto
+  --text-color: #{$gray-100};
+  --text-muted: #{$gray-400};
+  --heading-color: #{$white};
+  
+  // Outros elementos
+  --border-color: #{$gray-700};
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  
+  // Aplicar estilos
+  background-color: var(--background-color);
+  color: var(--text-color);
+  
+  .header {
+    background-color: var(--background-color);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    
+    &--scrolled {
+      background-color: rgba($gray-900, 0.95);
+    }
+  }
+  
+  .navigation {
+    @media (max-width: $breakpoint-lg) {
+      background-color: $gray-800;
+    }
+    
+    &__link {
+      color: var(--text-color);
+      
+      &:hover {
+        color: $primary-light;
+      }
+      
+      &--active {
+        color: $primary-lighter;
+      }
+    }
+  }
+  
+  .footer {
+    background-color: $gray-800;
+    color: var(--text-color);
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .contact-form {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    
+    &__title, &__map-title {
+      color: $primary-lighter;
+    }
+    
+    &__subtitle, &__address {
+      color: var(--text-muted);
+    }
+    
+    &__label {
+      color: var(--text-color);
+    }
+    
+    &__input, &__textarea {
+      background-color: $gray-900;
+      border-color: var(--border-color);
+      color: var(--text-color);
+      
+      &::placeholder {
+        color: $gray-600;
+      }
+      
+      &:focus {
+        border-color: $primary-light;
+      }
+    }
+    
+    &__info {
+      border-top-color: var(--border-color);
+    }
+    
+    &__info-content {
+      h4 {
+        color: $primary-lighter;
+      }
+      
+      a, p {
+        color: var(--text-muted);
+        
+        &:hover {
+          color: $primary-lighter;
+        }
+      }
+    }
+  }
+  
+  .home-page {
+    &__title {
+      color: $primary-lighter;
+    }
+    
+    &__subtitle {
+      color: var(--text-muted);
+    }
+    
+    &__section-title {
+      color: $primary-lighter;
+    }
+  }
+  
+  .contact-page {
+    &__title {
+      color: $primary-lighter;
+    }
+    
+    &__subtitle {
+      color: var(--text-muted);
+    }
+  }
+  
+  .plan-card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    
+    &__title {
+      color: $primary-lighter;
+    }
+    
+    &__price {
+      color: var(--heading-color);
+    }
+    
+    &__description {
+      color: var(--text-muted);
+    }
+    
+    &__feature-item {
+      color: var(--text-color);
+      
+      &::before {
+        color: $primary-lighter;
+      }
+    }
+  }
+  
+  .button {
+    &--outline {
+      border-color: $primary-light;
+      color: $primary-lighter;
+      
+      &:hover {
+        background-color: rgba($primary-light, 0.2);
+      }
+    }
+  }
+  
+  .faq-section {
+    background-color: var(--background-color);
+    
+    &__title {
+      color: $primary-lighter;
+    }
+  }
+  
+  .faq-item {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    box-shadow: $shadow-sm;
+    
+    &:hover {
+      box-shadow: $shadow-md;
+    }
+    
+    &--expanded {
+      border-color: $primary-light;
+      box-shadow: 0 0 0 2px rgba($primary-light, 0.2);
+      
+      .faq-item__question {
+        background-color: rgba($primary, 0.1);
+      }
+    }
+    
+    &__question {
+      background-color: var(--card-bg);
+      
+      &:hover {
+        background-color: rgba($primary, 0.08);
+      }
+      
+      h3 {
+        color: $primary-lighter;
+      }
+    }
+    
+    &__icon {
+      color: $primary-lighter;
+    }
+    
+    &__answer {
+      p {
+        color: var(--text-muted);
+      }
+    }
+  }
+} 

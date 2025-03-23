@@ -1,0 +1,113 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content,
+.main {
+  flex: 1;
+}
+
+.main {
+  padding-top: 65px; /* Altura do header */
+  
+  @media (max-width: $breakpoint-md) {
+    padding-top: 55px; /* Altura do header em tablets */
+  }
+  
+  @media (max-width: $breakpoint-sm) {
+    padding-top: 45px; /* Altura do header em smartphones */
+  }
+}
+
+// Container é definido em components/layout/container.scss
+
+// Grid
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: $grid-gutter-width;
+  
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Flex layouts
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+// Spacing utilities
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: $spacing-xs; }
+.mt-2 { margin-top: $spacing-sm; }
+.mt-3 { margin-top: $spacing-md; }
+.mt-4 { margin-top: $spacing-lg; }
+.mt-5 { margin-top: $spacing-xl; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: $spacing-xs; }
+.mb-2 { margin-bottom: $spacing-sm; }
+.mb-3 { margin-bottom: $spacing-md; }
+.mb-4 { margin-bottom: $spacing-lg; }
+.mb-5 { margin-bottom: $spacing-xl; }
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Section padding
+.section {
+  padding: $spacing-3xl 0;
+  
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-2xl 0;
+  }
+  
+  @media (max-width: $breakpoint-sm) {
+    padding: $spacing-xl 0;
+  }
+} 

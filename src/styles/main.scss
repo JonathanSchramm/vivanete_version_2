@@ -1,0 +1,34 @@
+// Base
+@import './base/variables';
+@import './base/reset';
+@import './base/typography';
+@import './base/layouts';
+@import './base/dark-theme';
+
+// Components - Layout
+@import './components/layout/container';
+@import './components/layout/header';
+@import './components/layout/footer';
+@import './components/layout/navigation';
+@import './components/layout/mobile-menu';
+
+// Components - Common
+@import './components/common/logo';
+
+// Components - UI
+@import './components/ui/button';
+@import './components/ui/plan-card';
+@import './components/ui/plans-section';
+@import './components/ui/contact-form';
+@import './components/ui/theme-toggle';
+@import './components/ui/hero-carousel';
+@import './components/ui/cookie-banner';
+@import './components/ui/vantagens-section';
+@import './components/ui/_faq-section';
+
+// Pages
+@import './pages/home';
+@import './pages/contact';
+@import './pages/plans';
+@import './pages/privacy-page';
+@import './pages/about-page'; 

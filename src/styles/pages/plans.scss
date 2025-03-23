@@ -1,0 +1,120 @@
+.plans-page {
+  padding-top: $spacing-4xl;
+  
+  @media (max-width: $breakpoint-md) {
+    padding-top: $spacing-3xl;
+  }
+  
+  @media (max-width: $breakpoint-sm) {
+    padding-top: $spacing-2xl;
+  }
+  
+  &__title {
+    text-align: center;
+    color: $primary;
+    margin-bottom: $spacing-sm;
+    
+    @media (max-width: $breakpoint-md) {
+      font-size: $font-size-3xl;
+    }
+    
+    @media (max-width: $breakpoint-sm) {
+      font-size: $font-size-2xl;
+    }
+  }
+  
+  &__subtitle {
+    text-align: center;
+    color: $gray-600;
+    font-size: $font-size-xl;
+    max-width: 700px;
+    margin: 0 auto $spacing-3xl;
+    
+    @media (max-width: $breakpoint-md) {
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-2xl;
+    }
+    
+    @media (max-width: $breakpoint-sm) {
+      font-size: $font-size-base;
+      margin-bottom: $spacing-xl;
+    }
+  }
+  
+  &__section {
+    margin-bottom: $spacing-4xl;
+    
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: $spacing-3xl;
+    }
+    
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: $spacing-2xl;
+    }
+  }
+  
+  &__info {
+    background-color: $gray-100;
+    padding: $spacing-4xl 0;
+    
+    @media (max-width: $breakpoint-md) {
+      padding: $spacing-3xl 0;
+    }
+    
+    @media (max-width: $breakpoint-sm) {
+      padding: $spacing-2xl 0;
+    }
+  }
+  
+  &__benefits {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  &__benefits-title {
+    text-align: center;
+    color: $primary;
+    margin-bottom: $spacing-3xl;
+    
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: $spacing-2xl;
+      font-size: $font-size-2xl;
+    }
+    
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: $spacing-xl;
+      font-size: $font-size-xl;
+    }
+  }
+  
+  &__benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-2xl;
+    
+    @media (max-width: $breakpoint-md) {
+      gap: $spacing-xl;
+    }
+    
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__benefit-item {
+    h3 {
+      color: $primary;
+      margin-bottom: $spacing-sm;
+      font-size: $font-size-xl;
+      
+      @media (max-width: $breakpoint-md) {
+        font-size: $font-size-lg;
+      }
+    }
+    
+    p {
+      color: $gray-700;
+      line-height: 1.6;
+    }
+  }
+} 
