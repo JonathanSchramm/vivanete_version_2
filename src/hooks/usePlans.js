@@ -1,4 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
+
+// Cache em nível de módulo para armazenar os planos e reduzir fetchs repetidos
+let plansCache = null;
+let lastFetchTime = 0;
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutos em milissegundos
 
 /**
  * Hook para buscar e gerenciar os dados dos planos
@@ -9,10 +14,19 @@ import { useState, useEffect } from 'react';
  */
 export const usePlans = ({ autoFetch = true } = {}) => {
   const [plans, setPlans] = useState([]);
-  const [isLoading, setIsLoading] = useState(autoFetch);
+  const [isLoading, setIsLoading] = useState(autoFetch && !plansCache);
   const [error, setError] = useState(null);
 
-  const fetchPlans = async () => {
+  // Usando useCallback para evitar recriações desnecessárias da função fetchPlans
+  const fetchPlans = useCallback(async (forceRefresh = false) => {
+    // Verificar cache antes de buscar novamente
+    const now = Date.now();
+    if (!forceRefresh && plansCache && (now - lastFetchTime < CACHE_DURATION)) {
+      setPlans(plansCache);
+      setIsLoading(false);
+      return;
+    }
+    
     try {
       setIsLoading(true);
       setError(null);
@@ -21,6 +35,9 @@ export const usePlans = ({ autoFetch = true } = {}) => {
       // const data = await getPlans();
       
       // Para desenvolvimento, usamos dados mockados
+      // Simulando um pequeno atraso para mostrar o estado de carregamento
+      await new Promise(resolve => setTimeout(resolve, 300));
+      
       const data = [
         {
           id: 'plano-basico',
@@ -68,25 +85,31 @@ export const usePlans = ({ autoFetch = true } = {}) => {
         }
       ];
       
+      // Atualizar o cache
+      plansCache = data;
+      lastFetchTime = Date.now();
+      
       setPlans(data);
     } catch (err) {
       setError(err);
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
 
+  // Efeito para buscar planos automaticamente, com respeito ao cache
   useEffect(() => {
     if (autoFetch) {
       fetchPlans();
     }
-  }, [autoFetch]);
+  }, [autoFetch, fetchPlans]);
 
-  return {
+  // Usar useMemo para retornar um objeto consistente
+  return useMemo(() => ({
     plans,
     isLoading,
     error,
     fetchPlans,
-    setPlans
-  };
+    refreshPlans: () => fetchPlans(true) // Método para forçar atualização ignorando cache
+  }), [plans, isLoading, error, fetchPlans]);
 }; 

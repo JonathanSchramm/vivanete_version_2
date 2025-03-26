@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
@@ -82,4 +82,5 @@ PlanCard.defaultProps = {
   className: ''
 };
 
-export default PlanCard; 
+// Use React.memo para evitar re-renderização quando as props não mudarem
+export default memo(PlanCard); 

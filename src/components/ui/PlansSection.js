@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import Container from '../layout/Container';
 import PlanCard from './PlanCard';
@@ -11,7 +11,11 @@ const PlansSection = ({ title, subtitle }) => {
     return (
       <section className="plans-section">
         <Container>
-          <div className="plans-section__loading">Carregando planos...</div>
+          <div className="plans-section__loading">
+            <div className="loading-spinner">
+              <div className="loading-spinner__circle"></div>
+            </div>
+          </div>
         </Container>
       </section>
     );
@@ -59,4 +63,4 @@ PlansSection.defaultProps = {
   subtitle: 'Escolha entre os nossos planos e tenha a melhor experiência de internet'
 };
 
-export default PlansSection; 
+export default memo(PlansSection); 
