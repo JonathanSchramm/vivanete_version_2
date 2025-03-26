@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import carouselInicial from '../../assets/images/carouselInicial.png';
+// import carouselInicial from '../../assets/images/carouselInicial.png';
 import carouselInicial2 from '../../assets/images/carouselInicial2.png';
 
 const HeroCarousel = () => {
@@ -11,12 +11,12 @@ const HeroCarousel = () => {
       id: 1,
       image: carouselInicial2,
       alt: 'Vivanete - Internet de alta velocidade'
-    },
-    {
-      id: 2,
-      image: carouselInicial,
-      alt: 'Vivanete - Planos para família'
     }
+    // {
+    //   id: 2,
+    //   image: carouselInicial,
+    //   alt: 'Vivanete - Planos para família'
+    // }
   ];
   
   // Automação para passar os slides a cada 5 segundos
