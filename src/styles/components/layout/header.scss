@@ -4,10 +4,10 @@
   left: 0;
   width: 100%;
   z-index: $z-index-fixed;
-  background-color: rgba($white, 0.95);
-  backdrop-filter: blur(5px);
-  transition: $transition-base;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  transition: all 0.4s ease-in-out;
+  box-shadow: none;
   padding: $spacing-sm 0;
   height: 65px;
   display: flex;
@@ -22,7 +22,9 @@
   }
   
   &--scrolled {
-    box-shadow: $shadow-md;
+    background-color: rgb(1, 52, 50);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 12px rgba(0, 40, 38, 0.3);
     padding: $spacing-xs 0;
   }
   
@@ -48,6 +50,16 @@
   
   &__client-button {
     margin-right: $spacing-md;
+    
+    .header:not(.header--scrolled) & {
+      border-color: $white;
+      color: $white;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      
+      &:hover {
+        background-color: rgba($white, 0.2);
+      }
+    }
     
     @media (max-width: $breakpoint-lg) {
       display: none;

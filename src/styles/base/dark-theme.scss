@@ -1,34 +1,25 @@
 .dark-mode {
-  // Cores de fundo
-  --background-color: #{$gray-900};
-  --container-bg: #{$gray-800};
-  --card-bg: #{$gray-800};
+  // Cores de fundo - usando variações de rgb(1, 84, 80)
+  --background-color: rgb(1, 52, 50); // Versão mais escura para o fundo
+  --container-bg: rgb(2, 63, 60); // Um pouco mais claro que o fundo
+  --card-bg: rgb(3, 70, 67); // Ainda mais claro para cartões
   
   // Cores de texto
   --text-color: #{$gray-100};
-  --text-muted: #{$gray-400};
+  --text-muted: #{$gray-300};
   --heading-color: #{$white};
   
   // Outros elementos
-  --border-color: #{$gray-700};
-  --shadow-color: rgba(0, 0, 0, 0.4);
+  --border-color: rgb(5, 95, 90); // Cor de borda mais clara
+  --shadow-color: rgba(0, 40, 38, 0.4);
   
   // Aplicar estilos
   background-color: var(--background-color);
   color: var(--text-color);
   
-  .header {
-    background-color: var(--background-color);
-    box-shadow: 0 4px 12px var(--shadow-color);
-    
-    &--scrolled {
-      background-color: rgba($gray-900, 0.95);
-    }
-  }
-  
   .navigation {
     @media (max-width: $breakpoint-lg) {
-      background-color: $gray-800;
+      background-color: rgb(2, 63, 60); // Menu mobile na cor container-bg
     }
     
     &__link {
@@ -39,13 +30,13 @@
       }
       
       &--active {
-        color: $primary-lighter;
+        color: $secondary;
       }
     }
   }
   
   .footer {
-    background-color: $gray-800;
+    background-color: rgb(1, 45, 43); // Um pouco mais escuro que o fundo principal
     color: var(--text-color);
     border-top: 1px solid var(--border-color);
   }
@@ -55,7 +46,7 @@
     box-shadow: 0 4px 12px var(--shadow-color);
     
     &__title, &__map-title {
-      color: $primary-lighter;
+      color: $secondary;
     }
     
     &__subtitle, &__address {
@@ -67,16 +58,16 @@
     }
     
     &__input, &__textarea {
-      background-color: $gray-900;
+      background-color: rgb(1, 52, 50); // Cor de fundo principal
       border-color: var(--border-color);
       color: var(--text-color);
       
       &::placeholder {
-        color: $gray-600;
+        color: $gray-500;
       }
       
       &:focus {
-        border-color: $primary-light;
+        border-color: $secondary;
       }
     }
     
@@ -86,14 +77,14 @@
     
     &__info-content {
       h4 {
-        color: $primary-lighter;
+        color: $secondary;
       }
       
       a, p {
         color: var(--text-muted);
         
         &:hover {
-          color: $primary-lighter;
+          color: $secondary;
         }
       }
     }
@@ -101,7 +92,7 @@
   
   .home-page {
     &__title {
-      color: $primary-lighter;
+      color: $secondary;
     }
     
     &__subtitle {
@@ -109,13 +100,13 @@
     }
     
     &__section-title {
-      color: $primary-lighter;
+      color: $secondary;
     }
   }
   
   .contact-page {
     &__title {
-      color: $primary-lighter;
+      color: $secondary;
     }
     
     &__subtitle {
@@ -128,7 +119,7 @@
     border-color: var(--border-color);
     
     &__title {
-      color: $primary-lighter;
+      color: $secondary;
     }
     
     &__price {
@@ -143,18 +134,18 @@
       color: var(--text-color);
       
       &::before {
-        color: $primary-lighter;
+        color: $secondary;
       }
     }
   }
   
   .button {
     &--outline {
-      border-color: $primary-light;
-      color: $primary-lighter;
+      border-color: $secondary;
+      color: $white;
       
       &:hover {
-        background-color: rgba($primary-light, 0.2);
+        background-color: rgba($secondary, 0.2);
       }
     }
   }
@@ -163,7 +154,7 @@
     background-color: var(--background-color);
     
     &__title {
-      color: $primary-lighter;
+      color: $secondary;
     }
   }
   
@@ -177,11 +168,11 @@
     }
     
     &--expanded {
-      border-color: $primary-light;
-      box-shadow: 0 0 0 2px rgba($primary-light, 0.2);
+      border-color: $secondary;
+      box-shadow: 0 0 0 2px rgba($secondary, 0.2);
       
       .faq-item__question {
-        background-color: rgba($primary, 0.1);
+        background-color: rgba($primary, 0.15);
       }
     }
     
@@ -189,16 +180,16 @@
       background-color: var(--card-bg);
       
       &:hover {
-        background-color: rgba($primary, 0.08);
+        background-color: rgba($primary, 0.12);
       }
       
       h3 {
-        color: $primary-lighter;
+        color: $secondary;
       }
     }
     
     &__icon {
-      color: $primary-lighter;
+      color: $secondary;
     }
     
     &__answer {

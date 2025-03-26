@@ -5,7 +5,6 @@ import Navigation from './Navigation';
 import MobileMenu from './MobileMenu';
 import Button from '../ui/Button';
 import Container from './Container';
-import ThemeToggle from '../ui/ThemeToggle';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 
 const Header = () => {
@@ -14,6 +13,11 @@ const Header = () => {
   
   // Adiciona classe quando o usuário rola a página
   const isScrolled = scrollPosition > 20;
+
+  // Força modo escuro ao carregar
+  useEffect(() => {
+    document.documentElement.classList.add('dark-mode');
+  }, []);
 
   // Fecha o menu móvel quando a tela é redimensionada para desktop
   useEffect(() => {
@@ -60,8 +64,6 @@ const Header = () => {
           />
           
           <div className="header__actions">
-            <ThemeToggle />
-            
             <Button 
               variant="outline" 
               size="sm"

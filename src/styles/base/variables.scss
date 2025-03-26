@@ -1,14 +1,14 @@
-// Paleta de cores principais (variações de verde)
-$primary: rgb(1, 84, 80); // Verde principal
-$primary-dark: darken($primary, 10%);  // #004541
-$primary-darker: darken($primary, 20%); // #003330
-$primary-light: lighten($primary, 10%); // #026b68
-$primary-lighter: lighten($primary, 20%); // #038783
+// Paleta de cores principais (variações de verde-azulado)
+$primary: rgb(1, 84, 80); // Verde-azulado principal
+$primary-dark: darken($primary, 10%);  // Mais escuro para elementos
+$primary-darker: darken($primary, 20%); // Ainda mais escuro para elementos de fundo
+$primary-light: lighten($primary, 15%); // Mais claro para hover
+$primary-lighter: lighten($primary, 30%); // Muito mais claro para destaques
 
 // Paleta de cores complementares
-$accent: #4FCE5D; // Verde mais claro como destaque
-$secondary: #5EE7D0; // Verde-água para elementos secundários
-$success: #00CC66; // Verde brilhante para confirmações
+$accent: #5EE7D0; // Verde-água para destaques
+$secondary: #59E4C9; // Verde-água mais claro como complementar
+$success: #00BF9A; // Verde-turquesa para confirmações
 $warning: #FF9800; // Laranja para alertas
 $danger: #F44336; // Vermelho para erros
 
