@@ -1,5 +1,5 @@
 // Paleta de cores principais (variações de verde-azulado)
-$primary: rgb(1, 84, 80); // Verde-azulado principal
+$primary: #003233; // Verde-azulado principal
 $primary-dark: darken($primary, 10%);  // Mais escuro para elementos
 $primary-darker: darken($primary, 20%); // Ainda mais escuro para elementos de fundo
 $primary-light: lighten($primary, 15%); // Mais claro para hover

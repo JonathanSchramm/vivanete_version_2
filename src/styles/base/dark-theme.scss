@@ -91,28 +91,28 @@
   }
   
   .home-page {
-    &__title {
-      color: $secondary;
-    }
+    // &__title {
+    //   color: $secondary;
+    // }
     
-    &__subtitle {
-      color: var(--text-muted);
-    }
+    // &__subtitle {
+    //   color: var(--text-muted);
+    // }
     
     &__section-title {
       color: $secondary;
     }
   }
   
-  .contact-page {
-    &__title {
-      color: $secondary;
-    }
+  // .contact-page {
+  //   &__title {
+  //     color: $secondary;
+  //   }
     
-    &__subtitle {
-      color: var(--text-muted);
-    }
-  }
+  //   &__subtitle {
+  //     color: var(--text-muted);
+  //   }
+  // }
   
   .plan-card {
     background-color: var(--card-bg);

@@ -54,7 +54,7 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
       <Container>
         <div className="header__inner">
-          <Link to="/" className="header__logo-link">
+          <Link to="/" className="header__logo-link" onClick={() => window.scrollTo(0, 0)}>
             <Logo />
           </Link>
           

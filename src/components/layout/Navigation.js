@@ -15,7 +15,10 @@ const Navigation = ({ isMobileMenuOpen, closeMobileMenu }) => {
             className={({ isActive }) => 
               `navigation__link ${isActive ? 'navigation__link--active' : ''}`
             }
-            onClick={closeMobileMenu}
+            onClick={() => {
+              closeMobileMenu();
+              window.scrollTo(0, 0);
+            }}
           >
             Home
           </NavLink>
@@ -26,7 +29,10 @@ const Navigation = ({ isMobileMenuOpen, closeMobileMenu }) => {
             className={({ isActive }) => 
               `navigation__link ${isActive ? 'navigation__link--active' : ''}`
             }
-            onClick={closeMobileMenu}
+            onClick={() => {
+              closeMobileMenu();
+              window.scrollTo(0, 0);
+            }}
           >
             Planos
           </NavLink>
@@ -37,7 +43,10 @@ const Navigation = ({ isMobileMenuOpen, closeMobileMenu }) => {
             className={({ isActive }) => 
               `navigation__link ${isActive ? 'navigation__link--active' : ''}`
             }
-            onClick={closeMobileMenu}
+            onClick={() => {
+              closeMobileMenu();
+              window.scrollTo(0, 0);
+            }}
           >
             Sobre
           </NavLink>
@@ -48,7 +57,10 @@ const Navigation = ({ isMobileMenuOpen, closeMobileMenu }) => {
             className={({ isActive }) => 
               `navigation__link ${isActive ? 'navigation__link--active' : ''}`
             }
-            onClick={closeMobileMenu}
+            onClick={() => {
+              closeMobileMenu();
+              window.scrollTo(0, 0);
+            }}
           >
             Contato
           </NavLink>

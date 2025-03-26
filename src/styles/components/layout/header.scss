@@ -52,12 +52,13 @@
     margin-right: $spacing-md;
     
     .header:not(.header--scrolled) & {
-      border-color: $white;
+      border-color: $secondary;
       color: $white;
+      background-color: $primary;
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
       
       &:hover {
-        background-color: rgba($white, 0.2);
+        background-color: rgba($secondary, 0.2);
       }
     }
     

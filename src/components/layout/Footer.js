@@ -18,10 +18,10 @@ const Footer = () => {
             <div className="footer__links-column">
               <h4 className="footer__links-title">Empresa</h4>
               <ul className="footer__links-list">
-                <li><Link to="/">Início</Link></li>
-                <li><Link to="/planos">Planos</Link></li>
-                <li><Link to="/contato">Contato</Link></li>
-                <li><Link to="/privacidade">Política de Privacidade</Link></li>
+                <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>Início</Link></li>
+                <li><Link to="/planos" onClick={() => window.scrollTo(0, 0)}>Planos</Link></li>
+                <li><Link to="/contato" onClick={() => window.scrollTo(0, 0)}>Contato</Link></li>
+                <li><Link to="/privacidade" onClick={() => window.scrollTo(0, 0)}>Política de Privacidade</Link></li>
               </ul>
             </div>
             
